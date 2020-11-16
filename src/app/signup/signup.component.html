@@ -1,0 +1,25 @@
+<form class="form" #f="ngForm" (ngSubmit)="signup(f)" >
+    <!-- (ngSubmit)="signup(f)"       -->
+    <mat-form-field class="form-control">
+        <mat-label>Your first name</mat-label>
+        <input matInput ngModel name="firstName" #firstName="ngModel" type="text" required/>
+    </mat-form-field>
+    <mat-form-field class="form-control">
+        <mat-label>Your last name</mat-label>
+        <input matInput ngModel name="lastName" #lastName="ngModel" type="text" required/>
+    </mat-form-field>
+    <mat-form-field class="form-control">
+        <mat-label>Your email</mat-label>
+        <input matInput ngModel name="email" #email="ngModel" type="text" required/>
+    </mat-form-field>
+    <mat-form-field class="form-control">
+        <mat-label>Your password</mat-label>
+        <input matInput ngModel name="password" #password="ngModel" type="password" required>
+    </mat-form-field>
+    <mat-form-field class="form-control">
+        <mat-label>Confirm password</mat-label>
+        <input matInput ngModel name="passwordConfirm" #passwordConfirm="ngModel" type="password" required>
+    </mat-form-field>
+    <button class="register-button" mat-raised-button color="primary" mat-button routerLink = "/">Create a User</button>
+
+</form>

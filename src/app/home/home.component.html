@@ -1,0 +1,34 @@
+
+    <div class="container">
+      <div class="heading">
+        <h1>Enjoy your Online Shopping With Us</h1>
+        <hr>
+      </div>
+
+      
+        <img class="mySlides" src="assets/images/home-1.jpg" style="width:100%; height:350px">
+        <div class="heading">
+          <hr>
+          
+         
+        </div>  
+      
+      <div class="row">
+        <div class="card" *ngFor="let product of products; index as i">
+          <div class="card-body">
+
+            <img class="img-card" [src]="product.imgUrl" style="width:70%; height:70%">
+
+        </div>
+        <div class="cart-footer">
+
+          <h5>{{product.productname}}</h5>
+          <strong>{{product.price}}</strong>
+          <br>
+          <button mat-raised-button color="primary" class="btn" (click)="addToCart(i)" *ngIf="add !== i">Add to cart</button>
+        
+        </div>
+        </div>
+        
+      </div>
+    </div>

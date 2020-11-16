@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="heading">
+      <h1>Shopping Cart</h1>
+    </div>
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of cart; index as i">
+          <td>
+            <div class="cart-info">
+              <img class="img-card" [src]="product.imgUrl" style="width:25%">
+              <div>
+                <p>{{product.productname}}</p>
+              </div>
+            </div>
+          </td>
+            <td><input type="number" min="1" placeholder="" [(ngModel)]="product.items"></td>
+            <td>{{product.price * product.items}}</td>
+            <td>
+              <button mat-raised-button color="primary" mat-button (click)="editQty(i)">Update</button>
+            </td>
+            <td>
+              <button mat-raised-button color="warn" (click)="removeFromCart(i)">Delete</button>
+            </td>
+          
+        </tr>
+      </tbody>
+    </table>
+
+</div>   
+
+<div class="container">
+  
+    <div class="card-sumary">
+      <table class="content-table">
+        <tr>
+          <td><strong>Total</strong>: ({{totalCountItem}} items)</td>
+  
+            <td>{{totalCart_price}}</td>
+            <td><button color="primary" mat-raised-button>Proceed to Checkout</button></td>
+        
+        </tr>
+      </table>
+    </div>
+</div>

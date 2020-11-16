@@ -1,0 +1,126 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #fefefe;
+    font-family: sans-serif;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 50px auto;
+  }
+  .heading {
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    color: darkgray;
+  }
+  .heading h1{
+    margin-left: 10px;
+  }
+
+  img {
+  
+    object-fit:cover;
+    margin: 10px;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    
+  }
+  hr{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 0.5px;
+    color: darkgray;
+  }
+  .card {
+    width: 15%;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 10px;
+
+    transition: 0.3s;
+  }
+  
+  .card-header {
+    text-align: center;
+    padding: 50px 10px;
+    color: #fff;
+  }
+  
+  .card-body {
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .card-body .img-card{
+    object-fit:cover;
+  }
+
+  .card-body .img-card{
+    display: block;
+  }
+  
+
+  .cart-footer .btn{
+    margin-left: 10px;
+    padding: 5px;
+    width: 140px;
+    margin-bottom: 10px;
+
+
+  }
+
+  .cart-footer h5,strong{
+    margin-left: 10px;
+  }
+
+  .cart-footer strong{
+    color: rgb(243, 55, 55);
+    font-size: 20px;
+  }
+
+  .cart-footer h5{
+    margin-bottom: 5px;
+    color: rgb(64, 64, 226);
+  }
+ 
+  .cart-footer input{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    width: 140px;
+    padding: 5px;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .card {
+      width: 40%;
+    }
+  }
+  
+  @media screen and (max-width: 620px) {
+    .container {
+      width: 100%;
+    }
+  
+    .heading {
+      padding: 20px;
+      font-size: 20px;
+    }
+  
+    .card {
+      width: 80%;
+    }
+  }

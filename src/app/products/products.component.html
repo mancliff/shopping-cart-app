@@ -1,0 +1,14 @@
+<div>
+    <form #f="ngForm" (ngSubmit)="saveProduct(f)">
+
+        <div class="formline"><input type="text" name="productname" ngModel placeholder="Product Name" required></div>
+        <div class="formline"><input type="text" name="description" ngModel placeholder="Description" required></div>
+        <div class="formline"><input type="text" name="price" ngModel placeholder="Price" required></div>
+        <div class="formline"><input type="file" ngModel  name="image" required #image></div>
+        
+
+        <div class="formline"><input type="submit" value="Save"></div>
+
+    </form>
+</div>
+ 

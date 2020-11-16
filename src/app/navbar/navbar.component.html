@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <span> Online Shopping Store</span>
+    <div class="spacer"></div>
+
+    <a mat-button routerLink = "/home">Home</a>
+    <a mat-button routerLink = "signin" *ngIf="!isUser">Login</a>
+    <a mat-button (click)="logout()" routerLink = "/" *ngIf="isUser">Logout</a>
+    <a mat-button routerLink = "product" *ngIf="isUser">Products</a>
+    <a mat-button routerLink = "cart" *ngIf="isUser">Cart</a>
+</mat-toolbar>
